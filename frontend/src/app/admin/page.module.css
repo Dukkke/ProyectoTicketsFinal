@@ -1,0 +1,362 @@
+/* Layout */
+.container {
+    min-height: 100vh;
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+.header {
+    padding: 16px 24px;
+    background-color: #1e293b;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.adminBadge {
+    background-color: #fef3c7;
+    color: #b45309;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logoutButton {
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    color: #94a3b8;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.mainContent {
+    padding: 24px;
+}
+
+.contentWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Login */
+.loginContainer {
+    min-height: 100vh;
+    background-color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.loginCard {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.loginHeader {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #f8fafc;
+    font-size: 15px;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.loginButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Stats */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.statCard {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.statValue {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.statLabel {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* Tabs */
+.tabsContainer {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tabButton {
+    padding: 10px 20px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #f8fafc;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.activeTab {
+    background-color: #3b82f6;
+}
+
+.subTabsContainer {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 12px;
+}
+
+.subTabButton {
+    padding: 8px 16px;
+    background: transparent;
+    color: #94a3b8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.activeSubTab {
+    background-color: #334155;
+    color: #f8fafc;
+}
+
+/* Tables */
+.tableContainer {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.th {
+    padding: 14px 16px;
+    text-align: left;
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #0f172a;
+}
+
+.td {
+    padding: 14px 16px;
+    color: #f8fafc;
+    font-size: 14px;
+    border-top: 1px solid #334155;
+}
+
+.actionButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+/* Modals */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modalContent {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 450px;
+    padding: 24px;
+}
+
+.modalHeader {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #f8fafc;
+}
+
+.modalActions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.cancelButton {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.confirmButton {
+    padding: 10px 20px;
+    background-color: #22c55e;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Analytics */
+.analyticsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.analyticsCard {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 24px;
+}
+.modalContentLarge {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 24px;
+    width: 95%;
+    max-width: 800px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modalBody {
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.chatMessage {
+    display: flex;
+    gap: 12px;
+}
+
+.chatBubble {
+    max-width: 85%;
+    padding: 16px 20px;
+    border-radius: 16px;
+    color: #f8fafc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.chatBubbleCoordinator {
+    background-color: #3b82f6;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 4px;
+}
+
+.chatBubbleStudent {
+    background-color: #334155;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 16px;
+}
+
+.metadataGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    margin-top: 16px;
+}
+
+.modalFooter {
+    padding: 20px 24px;
+    background-color: #1e293b;
+    border-top: 1px solid #334155;
+    display: flex;
+    justify-content: flex-end;
+}

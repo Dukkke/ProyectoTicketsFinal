@@ -1,0 +1,148 @@
+.sidebar {
+    position: sticky;
+    top: 100px;
+    width: 260px; /* Reduced width */
+    flex-shrink: 0;
+}
+
+.sidebarContent {
+    background: white;
+    border-radius: 20px; /* Slightly reduced radius */
+    padding: 20px; /* Reduced padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.sidebarTitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.createTicketBtn {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack text */
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Deeper blue */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.createTicketBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+/* Removed .btnIcon */
+
+.btnText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnMain {
+    color: white;
+    font-weight: 700;
+    font-size: 14px; /* Adjusted size */
+}
+
+.btnSub {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.statsCard {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statNumber {
+    font-size: 24px; /* Reduced */
+    font-weight: 800;
+    color: #2563eb;
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.helpBox {
+    background: #fffbeb;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #fcd34d;
+    text-align: center;
+}
+
+/* Removed .helpIcon */
+
+.helpText {
+    font-size: 11px;
+    color: #b45309;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.linksSection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.externalLink {
+    display: block; /* Full width block */
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    color: #475569;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.externalLink:hover {
+    background-color: white;
+    border-color: #cbd5e1;
+    color: #0f172a;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
+}

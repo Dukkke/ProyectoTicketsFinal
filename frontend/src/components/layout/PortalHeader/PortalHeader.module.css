@@ -1,0 +1,68 @@
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.logoBlue {
+    color: #2563eb;
+}
+
+.badge {
+    font-size: 14px;
+    background-color: #e0e7ff;
+    color: #4338ca;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.headerControls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.userInfo {
+    margin-right: 16px;
+    color: #64748b;
+}
+
+.settingsButton {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.settingsButton:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.logoutButton {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-weight: 600;
+    cursor: pointer;
+}

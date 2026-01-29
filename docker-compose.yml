@@ -1,0 +1,72 @@
+# Docker Compose for Sistema de Tickets UAH
+# Supports both local development and Azure deployment
+
+services:
+  # PostgreSQL Database (LOCAL ONLY - comment out for Azure deployment)
+  db:
+    image: postgres:15-alpine
+    container_name: tickets-db
+    restart: unless-stopped
+    profiles:
+      - local
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-tickets_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tickets_password}
+      POSTGRES_DB: ${POSTGRES_DB:-tickets_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - tickets-network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tickets_user} -d ${POSTGRES_DB:-tickets_db}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: tickets-backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      USE_AZURE: ${USE_AZURE:-false}
+      DEBUG: ${DEBUG:-false}
+      PYTHONUNBUFFERED: 1
+    ports:
+      - "8000:8000"
+    networks:
+      - tickets-network
+    # Only depend on db for local profile
+    depends_on:
+      db:
+        condition: service_healthy
+        required: false
+
+  # Next.js Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: tickets-frontend
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_URL: http://backend:8000
+      API_URL: http://backend:8000
+    ports:
+      - "3001:3000"
+    networks:
+      - tickets-network
+    depends_on:
+      - backend
+
+networks:
+  tickets-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

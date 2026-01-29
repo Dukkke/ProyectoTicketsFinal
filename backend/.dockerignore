@@ -1,0 +1,57 @@
+# Backend .dockerignore
+# Excluye archivos innecesarios de la imagen Docker
+
+# Entornos virtuales
+.venv/
+.venv_new/
+.venv_working/
+venv/
+env/
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# Variables de entorno (usar Docker secrets en producción)
+.env
+.env.local
+.env.*.local
+
+# Git
+.git/
+.gitignore
+
+# Documentación
+*.md
+docs/
+
+# Tests
+tests/
+pytest.ini
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Scripts de debug (no necesarios en producción)
+scripts/debug/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de build
+*.egg-info/
+dist/
+build/
+
+# Archivos temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db

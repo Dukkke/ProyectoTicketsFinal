@@ -1,0 +1,49 @@
+# Backend .gitignore
+
+# Entornos virtuales
+.venv/
+.venv_new/
+.venv_working/
+venv/
+env/
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Uploads (archivos subidos por usuarios)
+uploads/
+
+# Base de datos local
+*.db
+*.sqlite3
+
+# Alembic
+alembic/versions/__pycache__/
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,25 @@
+import './globals.css';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Sistema de Bienestar UAH Facultad de Ingeniería',
+    description: 'Sistema de gestión de bienestar para la Facultad de Ingeniería - Universidad Alberto Hurtado',
+};
+
+export default function RootLayout({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
+    return (
+        <html lang="es">
+            <head>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+                    rel="stylesheet"
+                />
+            </head>
+            <body>{children}</body>
+        </html>
+    );
+}

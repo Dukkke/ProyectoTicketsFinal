@@ -1,0 +1,177 @@
+/* Modal Overlay */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modalContent {
+    background-color: white;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modalHeader {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.modalIcon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.modalTitle {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.modalSubtitle {
+    color: #64748b;
+}
+
+/* Form Elements */
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.input,
+.select,
+.textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    background-color: white;
+}
+
+.textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.cancelButton {
+    flex: 1;
+    padding: 16px;
+    border-radius: 16px;
+    font-weight: 700;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.submitButton {
+    flex: 1;
+    padding: 16px;
+    border-radius: 16px;
+    font-weight: 700;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+/* Academic Search */
+.academicSearchContainer {
+    position: relative;
+}
+
+.searchClearButton {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #64748b;
+    font-size: 16px;
+}
+
+.academicList {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #f8fafc;
+}
+
+.academicItem {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color 0.2s;
+}
+
+.academicItem:hover {
+    background-color: #f1f5f9;
+}
+
+.academicItemSelected {
+    background-color: #e0e7ff;
+}
+
+.academicAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.academicAvatarSelected {
+    background-color: #4f46e5;
+    color: white;
+}
+
+.academicInfoName {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.academicInfoEmail {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.academicSelectionConfirm {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background-color: #e0e7ff;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #4f46e5;
+}

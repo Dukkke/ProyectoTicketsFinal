@@ -1,0 +1,254 @@
+.ticketsSection {
+    margin-top: 32px;
+}
+
+.ticketsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ticketsTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ticketCount {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.toggleArchiveBtn {
+    background: none;
+    border: 1px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.toggleArchiveBtn:hover {
+    background-color: #f8fafc;
+    border-color: #94a3b8;
+}
+
+.ticketsList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ticketCard {
+    background-color: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.ticketCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.solvedCard {
+    border-left: 4px solid #22c55e;
+}
+
+.archivedCard {
+    opacity: 0.7;
+    background-color: #f8fafc;
+}
+
+.ticketHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.ticketDate {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.ticketTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.ticketDescription {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.coordinatorResponse {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border-left: 3px solid #0ea5e9;
+}
+
+.ticketActions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.chatButton {
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s;
+}
+
+.chatButton:hover {
+    transform: scale(1.02);
+}
+
+.rateButton {
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.rateButton:hover {
+    transform: scale(1.02);
+}
+
+.reopenButton {
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    color: #64748b;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.reopenButton:hover {
+    background-color: #f8fafc;
+}
+
+.archiveButton {
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    background-color: #f9fafb;
+    color: #6b7280;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.archiveButton:hover {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.unarchiveButton {
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #10b981, #34d399);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.unarchiveButton:hover {
+    transform: scale(1.02);
+}
+
+.archivedSection {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 2px dashed #e2e8f0;
+}
+
+.archivedTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+/* Empty State */
+.emptyState {
+    text-align: center;
+    padding: 48px 24px;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border-radius: 24px;
+    margin-top: 32px;
+}
+
+.emptyIcon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.emptyText {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.emptySubtext {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.allArchivedMessage {
+    text-align: center;
+    padding: 32px;
+    background-color: #f0fdf4;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.allArchivedMessage p {
+    font-size: 16px;
+    color: #166534;
+    margin-bottom: 12px;
+}
+
+.showArchivedLink {
+    background: none;
+    border: none;
+    color: #16a34a;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
