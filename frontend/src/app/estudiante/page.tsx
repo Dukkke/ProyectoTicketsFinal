@@ -131,8 +131,7 @@ export default function EstudiantePage() {
         }
 
         const userModality = (parsedUser.modality || '').trim().toLowerCase();
-        // DEBUG: Temporary alert to verify modality
-        alert(`DEBUG: Modality detected: "${parsedUser.modality}" (Normalized: "${userModality}")`);
+
 
         // Redirect Remote users to their correct portal
         const remoteModalities = ['remota', 'online', 'vespertina', 'modalidad remota'];
@@ -524,6 +523,12 @@ export default function EstudiantePage() {
                                         <div className={styles.ticketDesc}>
                                             <span style={{ fontWeight: 600 }}>Cursos afectados:</span> {j.affected_courses}
                                         </div>
+                                        {j.professor_ids && j.professor_ids.length > 0 && (
+                                            <div className={styles.ticketDesc} style={{ marginTop: '4px' }}>
+                                                <span style={{ fontWeight: 600 }}>Profesores notificados:</span>{' '}
+                                                {j.professor_ids.map((pid: number) => academics.find(a => a.id === pid)?.name).filter(Boolean).join(', ')}
+                                            </div>
+                                        )}
                                         {j.rejection_reason && (
                                             <div style={{ padding: '12px', background: '#fee2e2', borderRadius: '8px', color: '#b91c1c', marginTop: '12px' }}>
                                                 <strong>Motivo de rechazo:</strong> {j.rejection_reason}
