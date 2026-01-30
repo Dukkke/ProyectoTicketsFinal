@@ -2,11 +2,11 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { ChevronDown, ChevronUp, Search, ArrowRight, BookOpen, GraduationCap, Monitor, X, PlayCircle, ExternalLink, MessageCircle, ZoomIn, ZoomOut } from 'lucide-react';
 import { COLORS, ALL_PROGRAMS, REMOTE_CATEGORIES, FAQItem } from '@/data/landingData';
 
-export default function Home() {
+function HomeContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const selectedProgramId = searchParams.get('program');
@@ -521,5 +521,13 @@ export default function Home() {
                 </div>
             )}
         </main>
+    );
+}
+
+export default function Home() {
+    return (
+        <Suspense fallback={<div style={{ minHeight: '100vh', background: '#f8fafc' }}></div>}>
+            <HomeContent />
+        </Suspense>
     );
 }
